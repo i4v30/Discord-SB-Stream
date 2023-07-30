@@ -107,12 +107,6 @@ client.on('messageCreate', async (msg) => {
 			`${player.formattedCurrentTime}/${player.formattedDuration}`,
 		);
 	}
-	if (command === 'stop') {
-		connection = null;
-		stream = null;
-		player = null;
-		StreamClient.leaveVoiceChannel();
-	}
 });
 
 /* Message
