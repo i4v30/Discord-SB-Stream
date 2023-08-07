@@ -15,7 +15,7 @@ module.exports = {
 	run: async (client, message, args) => {
 		if (!client.streamClient.connection)
 			return message.reply('Not connected to a voice channel');
-		let url = args[0];
+		let url = args.join(' ');
 		if (!url) return message.reply('No URL provided');
 		if (client.player) client.player.stop();
 		const videoId = getYouTubeID(url);
