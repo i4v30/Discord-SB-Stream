@@ -32,7 +32,7 @@ client.on('messageCreate', async (msg) => {
 	if (msg.author.bot) return;
 	if (![process.env.OWNER, client.user.id].includes(msg.author.id)) return;
 	if (!msg.content?.startsWith(process.env.PREFIX)) return;
-	const args = msg.content.trim().slice(1).split(' ');
+	const args = msg.content.trim().slice(process.env.PREFIX.length).split(' ');
 	const command = args.shift().toLowerCase();
 	if (commands.has(command)) {
         try {
