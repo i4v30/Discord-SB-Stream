@@ -29,7 +29,7 @@ module.exports = {
 		if (type !== 'cam') {
 			await client.streamClient.connection.createStream();
 		}
-		if (voiceChannel.type == 'GUILD_STAGE_VOICE') {
+		if (channel.type == 'GUILD_STAGE_VOICE') {
 			try {
 				await message.guild.members.me.voice.setSuppressed(false);
 			} catch {
