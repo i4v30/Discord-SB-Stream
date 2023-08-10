@@ -8,6 +8,7 @@ const client = new Client();
 const StreamClient = new DiscordStreamClient(client);
 
 StreamClient.setResolution('720p');
+StreamClient.setVideoCodec('H264');
 
 const commands = new Map();
 

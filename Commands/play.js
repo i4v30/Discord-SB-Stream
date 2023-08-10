@@ -48,7 +48,7 @@ module.exports = {
 			kbpsAudio: 128,
 			kbpsVideo: 2500,
 		});
-		client.player.on('vp8Header', () => {
+		client.player.on('start', () => {
 			message.reply('Started playing');
 		});
 		client.player.on('finish', () => {
