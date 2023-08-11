@@ -23,7 +23,8 @@ module.exports = {
 			try {
 				url = await ytdl.getInfo(videoId).then((info) => {
 					const format = ytdl.chooseFormat(info.formats, {
-						quality: '18', // 360p (because 360p has both audio and video)
+						quality: 'highest',
+						filter: 'audioandvideo',
 					});
 					return format.url;
 				});
