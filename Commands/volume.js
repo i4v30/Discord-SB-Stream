@@ -13,12 +13,12 @@ module.exports = {
 		if (!args[0])
 			return message.reply(
 				`Current volume is ${
-					client.player.playOptions.volume || 100
+					client.player.volumeManager.volume * 100
 				} %`,
 			);
-		client.player.setVolume(parseInt(args[0]));
+		client.player.volumeManager.setVolume(parseInt(args[0]) / 100);
 		message.reply(
-			`Current volume is ${client.player.playOptions.volume || 100} %`,
+			`Current volume is ${client.player.volumeManager.volume * 100} %`,
 		);
 	},
 };

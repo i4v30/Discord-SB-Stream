@@ -43,7 +43,7 @@ module.exports = {
 			},
 		);
 		client.player.play({
-			volume: 100,
+			volume: 1,
 			fps: 60,
 			hwaccel: false,
 			kbpsAudio: 128,
