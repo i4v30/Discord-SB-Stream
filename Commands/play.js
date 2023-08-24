@@ -44,7 +44,6 @@ module.exports = {
 		);
 		client.player.play({
 			volume: 1,
-			fps: 60,
 			hwaccel: false,
 			kbpsAudio: 128,
 			kbpsVideo: 2500,
