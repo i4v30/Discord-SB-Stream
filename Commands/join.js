@@ -27,7 +27,7 @@ module.exports = {
 			selfVideo: type !== 'golive',
 		});
 		if (type !== 'cam') {
-			await client.streamClient.connection.createStream();
+			await client.streamClient.connection.createStream(true);
 		}
 		if (channel.type == 'GUILD_STAGE_VOICE') {
 			try {
