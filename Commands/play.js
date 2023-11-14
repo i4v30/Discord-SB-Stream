@@ -1,6 +1,4 @@
 const { Client, Message } = require('discord.js-selfbot-v13');
-const ffprobe = require('ffprobe-static');
-const ffmpeg = require('ffmpeg-static');
 const ytdl = require('ytdl-core');
 const getYouTubeID = require('get-youtube-id');
 
@@ -37,10 +35,6 @@ module.exports = {
 			url,
 			client.streamClient.connection?.streamConnection?.udp ||
 				client.streamClient.connection.udp,
-			{
-				ffmpeg: ffmpeg,
-				ffprobe: ffprobe.path,
-			},
 		);
 		client.player.play({
 			volume: 1,
